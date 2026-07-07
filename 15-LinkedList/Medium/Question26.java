@@ -1,0 +1,14 @@
+/*
+ * Question 26 - Medium
+ *
+ * Delete the Middle Node of a Linked List
+ *
+ * Link: https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/
+ *
+ * Tags: leetcode
+ */
+public class Question26 {
+    public static void main(String[] args) {
+        // TODO: implement solution
+    }
+}
