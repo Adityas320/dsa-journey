@@ -14,11 +14,9 @@ public class Question5 {
         int num2=sc.nextInt();
         if(num1==num2) {
             System.out.println("equal");
-            return;
         }
         else if(num1>num2) {
             System.out.println(num1+" is greater than " + num2);
-            return;
         }
         else {
             System.out.println(num2 + " is greater than " + num1);

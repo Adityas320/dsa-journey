@@ -18,14 +18,19 @@ public class Question4 {
         System.out.println(num1+num2);
      }
      else if (operator == '-') {
+      
         System.out.println(num1-num2);
      }
      else if(operator == '*') {
         System.out.println(num1*num2);
      }
-     else if(operator == '/') {
-        System.out.println(num1/num2);
-    }
+      else if (operator == '/') {
+          if (num2 == 0) {
+        System.out.println("Cannot divide by zero");
+          } else {
+         System.out.println((double) num1 / num2);
+         }
+       }
     else {
         System.out.println("thankyou");
     }
