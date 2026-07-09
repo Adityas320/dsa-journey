@@ -7,10 +7,12 @@ import java.util.Scanner;
 public class Question9 {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
-        System.out.println("Enter the 2 numbers ");
+        System.out.println("Enter the range");
         int number=sc.nextInt();
-        int numer2=sc.nextInt();
-        int temp=number;
+        int number2=sc.nextInt();
+        boolean isarmstrong=false;
+        for(int i=number;i<=number2;i++) {
+        int temp=i;
         int temp1=temp;
         int digits=0;
         int tempnum=0;
@@ -18,21 +20,26 @@ public class Question9 {
             temp=temp/10;
             digits++;
         }
-        System.out.println(digits);
         while(temp1>0) {
             int a=temp1%10;
             temp1=temp1/10;
             int c=1;
-            for(int i=0;i<digits;i++) {
+            for(int j=0;j<digits;j++) {
                  c=c*a;
             }
             tempnum=tempnum+c;
         }
-        if(number==tempnum) {
-            System.out.println("it is armstrom");
+        if(i==tempnum) {
+            isarmstrong=true;
+            System.out.println(i+" is an armstrom number");
         }
         else {
-            System.out.println("it is not ");
+            continue;
         }
+        }
+        if(isarmstrong==false) {
+            System.out.println("no numbers in the range ");
+        }
+        sc.close();
     }
 }
