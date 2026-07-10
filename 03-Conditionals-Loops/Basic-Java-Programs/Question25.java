@@ -7,18 +7,24 @@
 import java.util.Scanner;
 public class Question25 {
     public static void main(String[] args) {
-        int temp=0;
+        int largest;
         int a;
         // TODO: implement solution
        try(Scanner sc = new Scanner(System.in)) {
-        do{
-            System.out.println("enter the number");
-             a=sc.nextInt();
-            if(a>temp) {
-                temp=a;
-            }
-        }while(a!=0);
+        System.out.println("enter the number");
+         largest = sc.nextInt();
+        if(largest==0) {
+            return;
+        }else {
+             do{
+                 System.out.println("enter the number");
+                     a=sc.nextInt();
+                     if(a>=largest&&a!=0) {
+                     largest=a;
+                         }
+                 }while(a!=0);
+        }
        }
-    System.out.println("largest number is : "+temp);
+    System.out.println("largest number is : "+largest);
     }
 }
