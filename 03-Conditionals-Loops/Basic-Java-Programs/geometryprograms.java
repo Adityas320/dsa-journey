@@ -47,6 +47,45 @@ public class geometryprograms {
     public static double perimeterOfParallelogram(double base, double side) {
         return 2 * (base + side);
     }
+        // Perimeter of Rectangle
+    public static double perimeterOfRectangle(double length, double width) {
+        return 2 * (length + width);
+    }
+
+    // Perimeter of Square
+    public static double perimeterOfSquare(double side) {
+        return 4 * side;
+    }
+
+    // Perimeter of Rhombus
+    public static double perimeterOfRhombus(double side) {
+        return 4 * side;
+    }
+
+    // Volume of Cone
+    public static double volumeOfCone(double radius, double height) {
+        return (Math.PI * radius * radius * height) / 3;
+    }
+
+    // Volume of Prism
+    public static double volumeOfPrism(double baseArea, double height) {
+        return baseArea * height;
+    }
+
+    // Volume of Cylinder
+    public static double volumeOfCylinder(double radius, double height) {
+        return Math.PI * radius * radius * height;
+    }
+
+    // Volume of Sphere
+    public static double volumeOfSphere(double radius) {
+        return (4.0 / 3.0) * Math.PI * radius * radius * radius;
+    }
+
+    // Volume of Pyramid
+    public static double volumeOfPyramid(double baseArea, double height) {
+        return (baseArea * height) / 3;
+    }
 
     public static void main(String args[]) {
 
