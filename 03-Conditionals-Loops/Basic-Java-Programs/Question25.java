@@ -5,16 +5,14 @@
  * all.
  */
 import java.util.Scanner;
+
 public class Question25 {
-    public static void main(String[] args) {
-        int largest;
-        int a;
-        // TODO: implement solution
-       try(Scanner sc = new Scanner(System.in)) {
+    public static int  largestUntilZero (Scanner sc) {
+        int largest,a;
         System.out.println("enter the number");
          largest = sc.nextInt();
         if(largest==0) {
-            return;
+            return 0;
         }else {
              do{
                  System.out.println("enter the number");
@@ -24,7 +22,14 @@ public class Question25 {
                          }
                  }while(a!=0);
         }
+        return largest;
+    }
+    public static void main(String[] args) {
+        int largest;
+        int a;
+        // TODO: implement solution
+       try(Scanner sc = new Scanner(System.in)) {
+        System.out.println(largestUntilZero(sc));
        }
-    System.out.println("largest number is : "+largest);
     }
 }
