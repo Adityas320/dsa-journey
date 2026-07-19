@@ -6,14 +6,17 @@
 import java.util.Scanner;
 public class Question3 {
     public static void main(String[] args) {
+
         // TODO: implement solution
         try(Scanner sc = new Scanner(System.in)) {
-            System.out.println("enter the numbers");
-            int n=3;
-            int a= sc.nextInt();
-            int b = sc.nextInt();
-            int c = sc.nextInt();
-                int sum=a+b+c;
+            System.out.println("enter the numbers you want to  average ");
+            int n = sc.nextInt();
+            int temp = n;
+            int sum=0;
+            while(temp!=0) {
+                sum= sum + sc.nextInt();
+                temp--;
+            }
                 double average = sum/n;
             System.out.println(average);
         }
