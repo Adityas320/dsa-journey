@@ -12,7 +12,7 @@ public class Question3 {
             System.out.println("enter the numbers you want to  average ");
             int n = sc.nextInt();
             int temp = n;
-            int sum=0;
+            double sum=0;
             while(temp!=0) {
                 sum= sum + sc.nextInt();
                 temp--;
