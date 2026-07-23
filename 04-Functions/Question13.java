@@ -16,6 +16,8 @@ public class Question13 {
         }
         return  true;
     }
+
+    
     public static void main(String[] args) {
         // TODO: implement solution
         try(Scanner sc = new Scanner(System.in)) {
