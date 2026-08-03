@@ -9,5 +9,8 @@ public class permutedarray {
             System.out.println(arr[i]);
         }
     }
+ 
+    
+
     
 }
