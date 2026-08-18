@@ -5,9 +5,12 @@
  *
  * Link: https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/
  */
+import java.util.List;
+import java.util.ArrayList;
 public class Question3 {
-    public static boolean[] ListofCandies(int a,int arr[]) {
-        boolean[] brr= new boolean[arr.length];
+    public static List<Boolean> ListofCandies(int a,int arr[]) {
+        List<Boolean> bool = new ArrayList<>();
+        // boolean[] brr= new boolean[arr.length];
         int max=arr[0];
         for(int i=1;i<arr.length;i++){
             if(arr[i]>max) {
@@ -16,19 +19,21 @@ public class Question3 {
         }
         for(int i=0;i<arr.length;i++) {
             if(arr[i]+a>=max) {
-                brr[i]=true;
+                bool.add(true);
+            }
+            else{
+                bool.add(false);
             }
         }
-        return brr;
+        return bool;
     }
     public static void main(String[] args) {
         // TODO: implement solution
         int arr[]={2,3,5,1,3};
         int extra =4;
-       boolean brr[]= ListofCandies(extra, arr);
-       for(int i=0;i<brr.length;i++) {
-        System.out.println(brr[i]);
-       }
+        List<Boolean> boo = new ArrayList<>();
+        boo=ListofCandies(extra, arr);
+       System.out.println(boo);
         
     }
 }
