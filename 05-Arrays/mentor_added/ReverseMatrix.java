@@ -1,27 +1,45 @@
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ReverseMatrix {
-    public static void rotate(int[][] matrix) {
-        int[][] arr = new int[matrix.length][];
-        for(int i=0;i<matrix.length;i++) {
-            for(int j=0;j<matrix[i].length;j++) {
-                arr[i][j]=matrix[j][i];
-                System.out.println(arr[i][j]);
+
+    public static int[][] transpose(int [][] arr) {
+        int[][] brr = new int[arr.length][arr.length];
+        for(int i=0;i<arr.length;i++) {
+            for(int j=0;j<arr[i].length;j++) {
+                brr[j][i]=arr[i][j];
             }
         }
+            return brr;
     }
-    public static void rotate(int []arr) {
+
+    public static int[][] rotate(int [][]arr) {
+        int [][] brr = new int[arr.length][arr.length];
+        for(int i=0;i<arr.length;i++) {
+            for(int j=0,k=arr[i].length-1;j<arr[i].length;j++,k--) {
+                brr[i][k]=arr[j][i];
+            }
+        }
+        return brr;
+    }
+
+    public static int[] reverse(int []arr) {
         int brr[]= new int[arr.length];
         for(int i=0,j=arr.length-1;i<arr.length;i++,j--) {
             brr[j]=arr[i];
         }
-        System.out.println(Arrays.toString(brr));
+        return brr;
     }
+
+
     public static void main(String[] args) {
-        int [][] brr={{1,2,3},{4,5,6},{7,8,9}};
-        //rotate(brr);
-        int[] arr={1,2,3};
-        rotate(arr);
+        int [][] crr={{1,2,3},{4,5,6},{7,8,9}};
+        // int [][] transposed =transpose(crr);
+        int[][] rotated=rotate(crr);
+        for(int i=0;i<rotated.length;i++) {
+            System.out.println(Arrays.toString(rotated[i]));
+        }
+        
     }
     
 }
