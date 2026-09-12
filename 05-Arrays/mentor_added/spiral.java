@@ -13,8 +13,8 @@ public class spiral {
             for(j=1;j>=0;j--) {
                 System.out.println(arr[i][j]);
             }
-        i=1;
-            for( j=0;j<arr.length-1;j++) {
+        j=0;
+            for( i=1;i>0;i--) {
                 System.out.println(arr[i][j]);
             }
         
