@@ -3,6 +3,9 @@ import java.util.ArrayList;
 public class spiral {
     public static List<Integer> spiral(int [][] matrix) {
         List<Integer> list = new ArrayList<>();
+        if (matrix.length==0) {
+            return  list;   
+        }
         int k;
         int left=0,right= matrix[0].length-1,bottom=matrix.length-1,top =0;
         while (top<=bottom && left <= right) {  
@@ -14,13 +17,17 @@ public class spiral {
             list.add(matrix[k][right]);
         }
         right--;
+        if(top<=bottom) {
         for(k=right;k>=left;k--) {
             list.add(matrix[bottom][k]);
         }
+        }
         bottom--;
+        if(right>=left) {
         for(k=bottom;k>=top;k--) {
             list.add(matrix[k][left]);
         }
+    }
         left++;
     }
     return list;
@@ -28,6 +35,8 @@ public class spiral {
     public static void main(String[] args) {
         int [][] arr = {{1,2,3},{4,5,6},{7,8,9}};
         int[][] arr1 ={{1,2,3},{4,5,6}};
+        int[][] arr2 ={{1,2,3}};
+        int[][] arr3 ={{1},{2},{3},{4}};
         //i stays same j increases j went till 2
         // int i=0;
         //     for(int j=0;j<arr.length;j++) {
@@ -52,6 +61,10 @@ public class spiral {
         System.out.println(values);
         List<Integer> values1 =  spiral(arr1);
         System.out.println(values1);
+        List<Integer> values2 =  spiral(arr2);
+        System.out.println(values2);
+        List<Integer> values3 =  spiral(arr3);
+        System.out.println(values3);
         
         
     }
